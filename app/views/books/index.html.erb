@@ -2,7 +2,7 @@
 <div class="mainContainer">
   <h1>Listing Books</h1>
 
-  <table>
+  <table class="striped responsive-table">
    <thead>
     <tr>
       <th>Title</th>
@@ -24,5 +24,5 @@
 
 <br>
 
-<%= link_to 'Add New Book', new_book_path %>
+<%= link_to 'Add New Book', new_book_path, class: "btn" %>
 </div>
