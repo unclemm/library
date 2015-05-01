@@ -2,48 +2,48 @@
 <html>
 <head>
   <title>Library</title>
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
-<!-- CSS  -->
+  <!-- CSS  -->
   
 </head>
 <body>
   <nav class="ottawaBlue" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Ottawa Area Intermediate School District</a>
+  <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo ">Ottawa Area ISD</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
+        <li><%= link_to "Books", books_path %></li>
+        <li><%= link_to "Authors", authors_path %></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-    </div>
-  </nav>
+       <li><%= link_to "Books", books_path %></li>
+       <li><%= link_to "Authors", authors_path %></li>
+     </ul>
+     <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+   </div>
+ </nav>
 
 
-  <div class="container">
-    <div class="section">
-      <%= yield %>
+ <div class="container">
+  <div class="section">
+    <%= yield %>
+  </div>
+</div>
+
+<footer class="page-footer ottawaBlue">
+  <div class="footer-copyright">
+    <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="mailto:hsiang.lin23@gmail.com">Sean Lin</a>
     </div>
   </div>
-
-  <footer class="page-footer ottawaBlue">
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="mailto:hsiang.lin23@gmail.com">Sean Lin</a>
-      </div>
-    </div>
-  </footer>
+</footer>
 
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
 
-  </body>
+</body>
 </html>

@@ -1,23 +1,33 @@
 <%= form_for(@book) do |f| %>
 <% if @book.errors.any? %>
-<div id="error_explanation">
-	<h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+	
+</div>
+<div class="row">
+      <div class="col s12">
+        <div class="card-panel red">
+          <span class="white-text"><h4><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h4>
 	<ul>
 		<% @book.errors.full_messages.each do |message| %>
 		<li><%= message %></li>
 		<% end %>
 	</ul>
-</div>
+          </span>
+        </div>
+      </div>
+    </div>
+
 <% end %>
 <div class="field">
 	<%= f.label :title %><br>
 	<%= f.text_field :title %>
 </div>
-<div class="field">
+<div class="field select">
 	<%= f.label :author %><br>
-	<%= f.text_field :author %>
+	<%= f.collection_select( :author_id, Author.all, :id, :full_name, {prompt: true}, {class: "browser-default"}) %>
 </div>
-<div class="actions ">
+<div class="actions submit">
 	<%= f.submit class: "btn btn-large btn-primary"%>
+	<%= link_to 'Add New Author', new_author_path, class: "btn btn-large btn-primary"%>
 </div>
+
 <% end %>

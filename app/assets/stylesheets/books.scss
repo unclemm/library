@@ -5,7 +5,7 @@
 @import "bootstrap";
 
 .mainContainer {
-	background-color: #FFF;
+	background-color: #000;
 	max-width: 950px;
 	min-width: 550px;
 	margin: auto;
@@ -23,6 +23,6 @@ td {
 	padding-right: 10px;
 }
 
-h1{
-
+select {
+	display: block;
 }

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Authors</h1>
+
+<table class ="striped responsive-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Year of Birth</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @authors.each do |author| %>
+      <tr>        
+        <td><%= link_to author.full_name, author %></td>    
+        <td><%= author.year_birth %></td>
+        <td><%= link_to 'Delete', author, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add New Author', new_author_path , class: "btn"%>

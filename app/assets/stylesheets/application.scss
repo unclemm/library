@@ -1,5 +1,6 @@
 @import "materialize";
 
+
 .ottawaBlue{
 	background-color: #051D2C !important;
 }
@@ -17,3 +18,13 @@
 .pretty th .desc {
   background-image: url(/images/down_arrow.gif);
 }
+
+.submit {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+/*select {
+	display: block;
+	margin-bottom: 5px;
+}*/

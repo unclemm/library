@@ -1,0 +1,36 @@
+<%= form_for(@author) do |f| %>
+<% if @author.errors.any? %>
+
+</div>
+<div class="row">
+  <div class="col s12">
+    <div class="card-panel red">
+      <span class="white-text"><h4><%= pluralize(@author.errors.count, "error") %> prohibited this author from being saved:</h4>
+        <ul>
+          <% @author.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+          <% end %>
+        </ul>
+      </span>
+    </div>
+  </div>
+</div>
+
+<% end %>
+
+<div class="field">
+  <%= f.label :first_name %><br>
+  <%= f.text_field :first_name %>
+</div>
+<div class="field">
+  <%= f.label :last_name %><br>
+  <%= f.text_field :last_name %>
+</div>
+<div class="field">
+  <%= f.label :year_birth %><br>
+  <%= f.text_field :year_birth %>
+</div>
+<div class="actions submit">
+  <%= f.submit class: "btn btn-large btn-primary"%>
+</div>
+<% end %>
